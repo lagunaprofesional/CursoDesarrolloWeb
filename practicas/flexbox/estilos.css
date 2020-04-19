@@ -1,0 +1,194 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open sans', Sans-serif;
+	background: #000 url("img/fondo.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	/*Este div es el contendor padre del resto*/
+	display: flex;
+	/*Colocamos los hijos en filas*/
+	flex-direction: row;
+	/*Esta propiedada nos ermite mantener el ancho de los elementos, pasando a una nueva línea si no caben*/
+	/*header ocupa el 100% (1 fila), section el 70% + aside el 30% (1 fila), footer el 100% (1 fila)*/
+	flex-wrap: wrap;
+}
+
+header {
+	width: 100%;
+	padding: 50px 0px;
+	/*header es el contenedor padre del div con el logo y el nav con el menú*/
+	display: flex;
+	/*Colocamos los hijos en filas*/
+	flex-direction: row;
+	/*Colocamos el espacio entre los hijos*/
+	justify-content: space-between;
+	/*Alineamos los hijos con align-items ya que están en una única fila*/
+	align-items: center;
+
+}
+
+header .menu a {
+	color: #fff;
+	text-decoration: none;
+	margin-right: 40px;
+	font-size: 18px;
+}
+
+header .menu a:hover {
+	text-decoration: underline;
+}
+
+.main {
+	background: #fff;
+	padding: 20px;
+	width: 70%;
+}
+
+.main article .thumb {
+	margin-bottom: 20px;
+}
+
+.main article .thumb img {
+	width: 100%;
+	/*Utilizar siempre con imágenes para eliminar paddings adicionales de los navegadores*/
+	vertical-align:top;
+}
+
+.main article h2 {
+	margin-bottom: 20px;
+	font-weight: normal;
+	font-size: 32px;
+}
+
+.main article p {
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 27px;
+}
+
+aside {
+	width: 30%;
+	background: #537dca;
+	padding: 20px;
+	/*aside es el contendor padre de los dos div con la clase ad*/
+	display: flex;
+	/*Colocamos los hijos en columnas*/
+	flex-direction: column;
+	/*Mantenemos el ancho de los hijos, pasando a una nueva línea cuando no caben*/
+	flex-wrap: wrap;
+	/*Colocamos el espacio entre los hijos*/
+	justify-content: space-between;
+}
+
+aside .ad {
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	padding: 50px 0px;
+	background: #4264a2;
+}
+
+footer {
+	margin: 20px 0px;
+	background: rgba(255,255,255, .2);
+	padding: 20px;
+	width: 100%;
+	color:#fff;
+	/*footer es el contendor padre de los  div autor y redes-sociales*/
+	display: flex;
+	/*Colocamos los hijos en filas*/
+	flex-direction: row;
+	/*Hacemos que los hijos no pasen a una nueva fila*/
+	flex-wrap: nowrap;
+	/*Colocamos el espacio entre los hijos*/
+	justify-content: space-between;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+footer .redes-sociales a:hover {
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 800px) {
+	/*Hacemos que el main ocupe el 100% de ancho*/
+	.main {
+		width: 100%;
+	}
+	
+	/*Hacemos que el aside ocupe el 100 de ancho y se posicione bajo el main*/
+	aside {
+		width: 100%;
+		flex-direction: row;
+	}
+	
+	/*Ajustamos el tamaño de los widgets*/
+	aside .ad {
+		width: 40%;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	/*Hacemos que los dos elementos del header se muestren uno bajo el otro*/
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	
+	header .menu {
+		width: 100%;
+		background: rgba(255,255,255,.2);
+		text-align: center;
+		padding: 20px;
+	}
+
+	header .menu a {
+		margin: 0 20px;	
+	}
+
+	header .logo {
+		margin-bottom: 20px;
+	}
+	
+	/*Hacemos que los dos elementos del footer se muestren en columnas*/
+	footer {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	footer .autor {
+		order: 2;
+	}
+	
+	footer .redes-sociales {
+		order: 1;
+		margin-bottom: 20px;
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+	/*Ocultamos el sidebar*/
+	aside {
+		display: none;
+	}
+}

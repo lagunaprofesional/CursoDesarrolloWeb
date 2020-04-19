@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Imagenes</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		.columna {
+			margin-top: 20px;
+			background: #f2f2f2;
+			border: 1px solid #424242;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- ---------- INSERTAR IMÁGENES ---------- -->
+		<!-- .no-gutters elimina margen de la fila -->
+		<div class="row no-gutters">
+			<div class="col-12 columna">
+				<!-- 
+					.rounded 		redondea las esquinas de la imagen
+					.img-thumbnail 	pone un borde a la imagen
+					.mx-auto 		centrar la imagen (margen X auto)
+					.float-left 	posiciona la imagen a la izq (no se recomienda; mejor hacerlo con css-flexbox)
+				 -->
+				 <!-- NO se recomienda incluir un width para las imágenes sino utilizar el ancho de su contenedor o bien definirlo en css -->
+				<img class="float-left img-thumbnail" width="300" src="img/bg.jpg" alt="">
+				<img class="float-right img-thumbnail" width="300" src="img/bg2.jpg" alt="">
+			</div>
+		</div>
+
+		<hr>
+		
+		<!-- ---------- INSERTAR IMAGEN CON PIÉ DE TEXTO ---------- -->
+		<div class="row">
+			<!-- 
+				<figure> 	para insertar una imagen con un pié de texto
+				.img-fluid 	la imagen toma el ancho del contenedor padre 
+			-->
+			<div class="col-6">
+				<figure class="figure">
+					<!-- Imagen -->
+					<img class="img-fluid rounded" src="img/bg3.jpg" alt="">
+					<!-- Pié de texto -->
+					<figcaption class="figure-caption">
+						<p class="text-center">Lorem ipsum dolor sit amet.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-6">
+				<figure class="figure">
+					<!-- Imagen -->
+					<img class="img-fluid rounded" src="img/bg5.jpg" alt="">
+					<!-- Pié de texto -->
+					<figcaption class="figure-caption">
+						<p class="text-center">Lorem ipsum dolor sit amet.</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

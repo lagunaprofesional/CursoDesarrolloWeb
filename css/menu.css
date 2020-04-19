@@ -1,0 +1,33 @@
+body {
+	font-family: sans-serif, helvetica;
+	background: #e8e8e8;
+}
+
+.menu {
+	list-style: none; /*Eliminamos las viñetas*/
+	padding: 0; /*Eliminamos el espacio de las viñetas*/
+	background: #092327;
+	width: 90%; /*Ajustamos el ancho al 90% de la pantalla*/
+	max-width: 1000px; /*Ajustamos el ancho máximo*/
+	margin: 20px auto; /*Ajustamos la posición con un espaciado arriba y abajo (20px) y centrado (auto)*/
+
+}
+
+/*Esta es la clave para formar el menú horizontal*/
+.menu li {
+	display: inline-block; /*Convertimos el elemento de lista en tipo bloque*/
+	text-align: center; /*Centramos el texto del enlace*/
+}
+
+/*Aplicamos estilos a los enlaces*/
+.menu li a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+}
+
+/*Aplicamos estilos al pasar el ratón*/
+.menu li a:hover {
+	background: #ef8354;
+}

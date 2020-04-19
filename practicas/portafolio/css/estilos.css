@@ -1,0 +1,325 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Open Sans";
+  font-size: 16px; 
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; 
+}
+
+/* ----- ----- HEADER ----- ----- */
+header {
+	background: url("../img/bg.jpg"), #49A3D6;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-height: 600px; 
+}
+
+header .menu {
+    margin: 40px 0;
+    text-align: right; 
+}
+
+header .menu a {
+	margin: 0 20px;
+	color: #fff;
+	font-size: 1em;
+	/*Convertimos a tipo bloque para ajustar padding*/
+	display: inline-block;
+	padding-bottom: 9px;
+	text-decoration: none;
+	/*Ajustamos el borde a 2px pero sin color ya que después vamos a añadir el color en la propiedad hover.
+	Si no lo hacemos, se nota un pequeño desplazamiento de esos 2px que no queda bien.*/
+	border-bottom: 2px solid transparent; 
+}
+
+header .menu a:hover {
+	border-bottom: 2px solid #fff; 
+}
+
+header .contenedor-texto {
+	/*Utilizamos flex-box para centrar el elemento*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 190px 0; 
+}
+
+/*Ajustamos la caja que contiene nuestro nombre y profesión*/
+header .contenedor-texto .texto {
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+	/*display: inline-block;*/
+	text-align: center;
+	padding: 20px 60px; 
+}
+
+header .contenedor-texto .texto h1, 
+header .contenedor-texto .texto h2 {
+	color: #fff;
+	font-weight: 300;
+	margin: 0; 
+}
+
+header .contenedor-texto .texto .nombre {
+	margin-bottom: 10px;
+	font-size: 50px;
+	line-height: 50px; 
+}
+
+header .contenedor-texto .texto .profesion {
+	font-size: 25px;
+	line-height: 25px; 
+}
+
+/* ----- ----- MAIN ----- ----- */
+.main .contenedor {
+	/*Necesitamos hacer visible este contenedor para colocar la foto sobre el anterior contenedor*/
+	overflow: visible; 
+}
+
+.main .acerca-de {
+	text-align: center; 
+}
+
+.main .acerca-de .foto {
+	margin-top: -60px; 
+}
+
+.main .acerca-de .foto img {
+	/*Como nuestra imagen es cuadrada, con esta propiedad la convertimos en un círculo*/
+	border-radius: 50%;
+	vertical-align: top;
+	border: 5px solid rgba(255, 255, 255, 0.2); 
+}
+
+.main .acerca-de .texto {
+	color: #5a5a5a;
+	font-weight: 600;
+	font-size: 1em;
+	line-height: 30px;
+	width: 80%;
+	margin: 40px auto 60px auto; 
+}
+
+.main .acerca-de .texto .titulo {
+	font-size: 34px;
+	margin-bottom: 40px;
+	line-height: 34px;
+	font-weight: 300;
+	color: #dd820d;
+	text-align: center; 
+}
+
+.main .acerca-de .texto .bold {
+      color: #3895ea;
+      text-decoration: underline; 
+ }
+
+
+ /*--- --- TRABAJOS --- ---*/
+ .main .trabajos {
+  background: #f2f2f2;
+  padding: 60px 0; 
+}
+
+.main .trabajos .contenedor {
+    /*Para eliminar posibles con flex-box*/
+    overflow: hidden; 
+}
+
+.main .trabajos .titulo {
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 60px;
+	font-weight: 300;
+	color: #323068;
+	text-align: center; 
+}
+
+.main .trabajos .contenedor-trabajos {
+	/*Utilizamos flex-box para posicionar los elementos hijos*/
+	display: flex;
+	flex-direction: rows;
+	/*Cuando el elemento no cabe pasa a una nueva fila*/
+	flex-wrap: wrap;
+	justify-content: space-between; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo {
+	/*Ajustamos el ancho de cada trabajo para que entren 4 por fila con un pequeño espacio entre ellos*/
+	width: 23%;
+	margin-bottom: 40px; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb {
+	width: 100%;
+	margin-bottom: 10px; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb img {
+	vertical-align: top;
+	width: 100%;
+	border-radius: 5px; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+	text-align: center; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
+	font-weight: 700;
+	color: #3895ea;
+	margin-bottom: 10px; 
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
+	font-size: 14px;
+	color: #636363; 
+}
+
+/* ----- ----- FOOTER ----- ----- */
+footer .contacto {
+	padding: 60px 0; 
+}
+
+footer .contacto .titulo {
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 60px;
+	font-weight: 300;
+	color: #3895ea;
+	text-align: center; 
+}
+
+footer .contacto .formulario {
+	/*Utilizamos flex-box para posicionar los elementos hijos*/
+	display: flex;
+	/*Cuando el elemento no cabe pasa a una nueva fila*/
+	flex-wrap: wrap;
+	justify-content: space-between; 
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea {
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 20px;
+	color: #a4a4a4; 
+}
+
+/*Ajustamos los bordes cuando se posiciona el cursor*/
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus {
+	border:2px solid #3895ea;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"] {
+	/*Ajustamos el ancho de estos dos campo con un pequeño espacio entre ellos*/
+	width: 49%;
+	margin-bottom: 15px; 
+}
+
+footer .contacto .formulario textarea {
+	/*Ajustamos para que el usuario sólo pueda agrandar vertical-. el textarea hasta un max de 300px*/
+	width: 100%;
+	height: 100px;
+	min-width: 100%;
+	min-height: 100px;
+	max-height: 300px; 
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario .boton {
+	margin: auto;
+	background: #3895ea;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 15px 40px; 
+	cursor: pointer;
+}
+
+footer .contacto .formulario .boton:hover {
+	background: #387bea; 
+}
+
+footer .redes-sociales {
+	background: #1e2b38;
+	padding: 60px 0; 
+}
+
+footer .redes-sociales .contenedor {
+	/*Utilizamos flex-box para posicionar los elementos hijos*/
+	display: flex;
+	justify-content: center; 
+}
+
+footer .redes-sociales .contenedor a {
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	/*Los iconos son font-awesome por lo que el tamaño se cambia como si fura texto*/
+	font-size: 30px;
+	/*Cambiamos a tipo bloque para modificar padding, etc.*/
+	display: block;
+	padding: 15px 0;
+	margin: 0 20px;
+	border-radius: 3px; 
+}
+
+footer .redes-sociales .contenedor .twitter:hover {background: #55acee; }
+
+footer .redes-sociales .contenedor .facebook:hover {background: #3b5998; }
+
+footer .redes-sociales .contenedor .youtube:hover {background: #cd201f; }
+
+footer .redes-sociales .contenedor .github:hover {background: #666666; }
+
+footer .redes-sociales .contenedor .instagram:hover {background: #3f729b; }
+
+
+/* ----- ----- MEDIA QUERIES ----- ----- */
+@media screen and (max-width: 800px) {
+	header .menu {
+		text-align: center; 
+	}
+
+	.main .trabajos .contenedor-trabajos .trabajo {
+		width: 46%; 
+	} 
+}
+
+@media screen and (max-width: 500px) {
+	header .contenedor-texto .texto .nombre {
+		font-size: 35px; 
+	}
+	
+	header .contenedor-texto .texto .profesion {
+		font-size: 18px; 
+	}
+
+	footer .redes-sociales .contenedor {
+		flex-wrap: wrap; 
+	}
+	
+	footer .redes-sociales .contenedor a {
+		padding: 20px 0px; 
+	} 
+}
+
+/*# sourceMappingURL=estilos.css.map */

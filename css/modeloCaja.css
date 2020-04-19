@@ -1,0 +1,40 @@
+/* Podemos eliminar los margenes internos y paddings que agregan por defecto los navegadores */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body { 
+	font-family: Arial;
+	line-height: 22px;
+}
+
+.caja {
+	background:#0353a4;
+	width:200px;
+	/*height:200px;*/
+	
+	margin:20px;
+	
+	/* El primer valor es para margen sup. e inf. y el segundo valor para margen der. e izq.*/
+	/*margin:20px 20px;*/
+
+	/* Margen superior, derecha, inferior e izquierda */
+	/*margin:20px 15px 10px 5 px;*/
+
+	/*
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	*/
+	
+	padding: 20px;
+	/*Podemos especificar el padding para cada lado, como par el margin */
+	/*padding:20px 10px;*/
+	/*padding:20px 10px 5px 0px;*/
+}
+
+.caja p {
+	background: #eee5e9;
+}

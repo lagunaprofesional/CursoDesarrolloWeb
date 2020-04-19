@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios</title>
+</head>
+<body>
+	<form action="" method="">
+		<!-- Tipo de elemento: ETIQUETA (label) -->
+		<label for="Campo0">Tu nombre:</label>
+		<!-- for: permite asociar la etiqueta a un elemento mediante su "id" -->
+		<!-- Tipo de elemento: TEXTO (input type="text") -->
+		<input type="text" value="Nombre" id="Campo0" disabled>
+		<!-- value: muestra el nombre o título del campo -->
+		<!-- disabled: campo deshabilitado -->
+		<br />
+		
+		<label for="Campo1">Tu nombre:</label>
+		<!-- Tipo de elemento: TEXTO (input type="text") -->
+		<input type="text" placeholder="Nombre" maxlength="20" name="Campo1" size="50" required>
+		<!-- palceholder: muestra el nombre o título del campo pero se borra al posicionar el cursor -->
+		<!-- maxlength: nº máximo de caracteres admitidos -->
+		<!-- name: nombre interno que tomará el input-->
+		<!-- size: tamaño del input. NO utilizar y modificar por CSS -->
+		<!-- required: campo obligatorio -->
+		<!-- readonly: campo de solo lectura -->
+		<br />
+		
+		<!-- Tipo de elemento: EMAIL (input type="email") -->
+		<input type="email" placeholder="Correo electrónico" name="Campo2">
+		<br />
+		
+		<!-- Tipo de elemento: CAJA DE TEXTO (textarea) -->
+		<textarea name="Campo3" id="" placeholder="Mensaje" cols="30" rows="10"></textarea>
+		<!-- cols: tamaño-ancho del elemento. NO utilizar y modificar por CSS -->
+		<!-- rows: tamaño-alto del elemento. NO utilizar y modificar por CSS -->
+		<!-- id: identificador único del elemento -->
+		<br />
+		
+		<label for="pais">País</label>
+		<!-- Tipo de elemento: LISTA DESPLEGABLE (select) -->
+		<select name="Campo4" id="pais">
+			<option value="mexico">México</option>
+			<option value="españa">España</option>
+			<option value="argentina">Argentina</option>
+			<!-- value: valor que se enviará con el formulario-->
+		</select>
+		<br />
+		
+		<!-- Tipo de elemento: BOTÓN (input type="radio") -->
+		<input type="radio" name="Campo5" value="Hombre" id="hombre">Hombre
+		<input type="radio" name="Campo5" value="Mujer" id="mujer">Mujer
+		<br />
+
+		<!-- Tipo de elemento: BOTÓN (input type="radio") -->
+		<input type="radio" name="Campo6" value="Hombre" id="hombre2"><label for="hombre2">Hombre</label>
+		<input type="radio" name="Campo6" value="Mujer" id="mujer2"><label for="mujer2">Mujer</label>
+		<!-- Como se ha añadido un elemento <label>, se puede seleccionar la opción haciendo clic en el texto y no únicamente en el radiobutton -->
+		<br />
+		
+		<!-- Tipo de elemento: CHECKBOX (input type="checkbox") -->
+		<input type="checkbox" name="Campo7" id="terminos">Términos y condiciones
+		<br />
+
+		<!-- Tipo de elemento: CHECKBOX (input type="checkbox") -->
+		<input type="checkbox" name="Campo8" id="terminos2"><label for="terminos2">Términos y condiciones</label>
+		<!-- Como se ha añadido un elemento <label>, se puede marcar haciendo clic en el texto y no únicamente en el check -->
+		<br />
+
+		<!-- Tipo de elemento: BOTÓN (input type="submit") -->
+		<input type="submit" value="Enviar">
+		<!-- value: muestra un nombre para el botón -->
+
+	</form>
+</body>
+</html>

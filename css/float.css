@@ -1,0 +1,59 @@
+/*
+La propiedad float permite maquetar sitios web creando columnas;
+permite cambiar el comportamiento de los elementos de tipo bloque y que se comporten
+como elementos inline (se colocan uno al lado del otro).
+Inicialmente, se creó para colocar texto alrededor de una imagen.
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: Arial;
+}
+
+.cajaPadre {
+	background: #2e294e;
+	width: 700px;
+	/*Se utiliza para solucionar el problema de un contendor padre <div> 
+	que incluye otros contenedores hijos con la propiedad float (no se muestra) */
+	overflow: hidden;
+}
+
+/* Método alternativo para solucionar el problema anterior pero que implica insertar código
+html (nuevo div asociado a esta clase clear)*/
+/*.clear {
+	clear:both;
+}*/
+
+.caja {
+	width: 200px;
+	color: #fff;
+	font-size: 38px;
+	height: 200px;
+	background: #0E6BA8;
+	margin: 20px;
+}
+
+/*Clase para posicionar la caja 1*/
+.uno {
+	float: left;
+}
+
+/*Clase para posicionar la caja 2; de esta forma se van creando columnas*/
+.dos {
+	float: left;
+}
+
+.articulo {
+	background: #ccc;
+	width: 800px;
+}
+
+/*Ejemplo de cómo float permite posicionar el texto alrededor de una img.*/
+/*.articulo img {
+	float: left;
+}*/

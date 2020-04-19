@@ -1,0 +1,25 @@
+.caja {
+	width: 200px;
+	height: 200px;
+	/*background: #7AB04B;*/
+	/*background: rgb(20,20,200);*/
+	/*background: rgb(84%, 15%, 24%);*/
+	/*rgba permite añadir un valor (entre o y 1) de transparencia*/
+	background: rgba(215, 38, 61, .5);
+}
+
+/* 
+- Formas de asignar un color:
+;
+	1.- Palabras Clave:
+	Hay 17 palabras clave que podemos usar:
+	aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, 
+	olive,orange, purple, red, silver, teal, white, yellow
+
+	2.- RGB Decimal: rgb(215, 38, 61)
+
+	3.- RGB Porcentual: rgb(84%, 15%, 24%)
+
+	4.- RGB Hexadecimal: #D7263D
+
+ */

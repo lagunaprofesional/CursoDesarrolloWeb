@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: Arial;
+}
+
+.contenedor {
+	width: 80%;
+	max-width: 700px;
+	height: 500px;
+	background: #212d40;
+	
+	/*Esta propiedad habilita el resto de propiedades flex*/
+	display: flex;
+
+	/*Cambia la posición de las cajas (normal=column, en paralelo=row)*/
+	flex-direction:row;
+	/*flex-direction:row-reverse;*/
+	/*flex-direction:column;*/
+	/*flex-direction:column-reverse;*/
+	
+	/*Permite mantener el ancho de los elementos, pasando a una nueva línea si no caben*/
+	flex-wrap:wrap;
+	/*flex-wrap:wrap-reverse;*/
+	
+	/*Permite modificar dos propiedades en un única línea*/
+	/*flex-flow: row wrap;*/
+	
+	/*Permite modificar la forma en la que se reparte el espacio entre elementos*/
+	/*justify-content: flex-start;*/
+	/*justify-content: flex-end;*/
+	/*justify-content: center;*/
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	
+	/*Permite modificar la alineación de los elementos en una caja.
+	A diferencia de aling-content, solo funciona cuando los elementos NO ocupan más de una fila*/
+	/*align-items:flex-start;*/
+	/*align-items:flex-end;*/
+	/*align-items:center;*/
+	/*align-items:stretch;*/
+	/*align-items:baseline;*/
+	
+	/*Permite modificar la alineación de los elementos en una caja.*/
+	/*align-content:flex-start;*/
+	align-content:flex-end;
+	/*align-content:center;*/
+
+}
+
+.caja {
+	width: 100px;
+	height: 100px;
+	background: #f79256;
+	text-align: center;
+	margin: 20px;
+	padding: 20px;
+	font-size: 40px;
+	color: #fff;
+/*	flex-grow:1;
+	flex-shrink:1;
+
+	flex:1 1 auto;*/
+}
+
+/*
+.dos {
+	flex-basis:200px;
+	flex-grow:4;
+	flex-shrink:0;
+
+	height: auto;
+	align-self:stretch;
+}*/

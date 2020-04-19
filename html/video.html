@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+</head>
+<body>
+	<!-- 
+	Formato 	Media Type
+	=======================
+	MP4 		video/mp4
+	WebM 		video/webm
+	Ogg 		video/ogg
+
+
+	# Soporte de los Navegadores
+
+	Navegador 	MP4 	WebM 	Ogg
+	================================
+	IExplorer 	SI 		NO 		NO
+	Chrome 		SI 		SI 		SI
+	Firefox 	SI 		SI 		SI
+	Safari 		SI 		NO 		NO
+	Opera 		SI 		SI 		SI
+	--
+	 -->
+	 <!-- Opción 1 -->
+	<video src="media/keyboard.mp4" width="600" controls=""></video>
+	<br />
+	<br />
+	<!-- Opción 2: esta sintaxis permite tener el video en más de un formato y el navegador reproducirá el primero que pueda leer -->
+	<video height="600" controls>
+		<source src="media/keyboard.mp4" type="video/mp4">
+		<source src="media/keyboard.ogg" type="video/ogg">
+		<source src="media/keyboard.webm" type="video/webm">
+	</video>
+</body>
+</html>

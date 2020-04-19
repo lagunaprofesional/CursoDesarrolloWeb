@@ -1,0 +1,70 @@
+* {
+	padding: 0;
+	margin:0;
+	box-sizing: border-box; /*Hace que las cajas tengan el tamaño especificado incluyendo el padding*/
+
+}
+
+body {
+	background: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+.formulario {
+	background: #fff;
+	width: 500px;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.formulario input {
+	display: block; /*Hacemos que los campos se muestren uno bajo el otro (tipo bloque)*/
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	border:1px solid #226fc1;
+	font-family: Arial;
+	font-size: 16px;
+
+}
+
+/*Modificamos el borde cuando hacemos clic en cada campo*/
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+	border: 2px solid #4fb560;
+}
+
+/*Limitamos el cambio de tamaño del campo textarea*/
+.formulario textarea {
+	min-height: 120px;
+	max-height: 300px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/*Ajustamos aspecto del botón*/
+.formulario input[type="submit"] {
+	width: 200px;
+	margin:0 auto;
+	background: none;
+	border: 1px solid #4fb560;
+	color: #4fb560;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+/*Ajustamos aspecto del botón al pasar el ratón*/
+.formulario input[type="submit"]:hover {
+	background: #4fb560;
+	color: #fff;
+}

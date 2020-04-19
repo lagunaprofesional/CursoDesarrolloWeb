@@ -1,0 +1,27 @@
+body {
+	/*Cuando usamos una fuente propia siempre se escribe entre comillas aunque sea una única palabra.*/
+	font-family: "FuentePropia", sans-serif, "Times New Roman", Helvetica, Arial;
+}
+
+h1 {
+	font-family: Arial, "Times New Roman";
+	font-size:20px;
+	/* font-style: normal | italic;*/
+	font-style: italic;
+	/* font-weigth: normal | bold;*/
+	font-weight: bold;
+	color:#4281ed;
+	/* text-align: left | center | right | justify;*/
+	text-align: center;
+	/*text-decoration:  | underline;*/
+	text-decoration: underline;
+	/*text-transform: uppercase | lowecase;*/
+	text-transform:uppercase;
+	/*Espacio entre letras*/
+	letter-spacing: 10px;
+}
+
+p {
+	/*Espacio entre líneas*/
+	line-height: 30px;
+}

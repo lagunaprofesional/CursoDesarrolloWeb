@@ -1,0 +1,58 @@
+/*display [inline | block | none | inline-block | flex]*/
+/*visibility:hidden; Equivale "display: none;" pero reservando el espacio*/
+
+body {
+	font-family: Arial, Sans-serif;
+	background: #f2f2f2;
+}
+
+.caja {
+	color: #fff;
+	background: #4fb560;
+	margin: 20px 0; 
+	width: 200px;
+	height:200px;
+	/*padding: 20px;*/
+	/*Permite decidir qué hacer cuando el contenido de un elemento desborda su contenedor
+	overflow[hidden | auto | ...] [ocultar | muestra scroll | ...]*/
+	overflow:auto;
+	
+}
+
+a {
+	background: #246eb9;
+	color:#fff;
+	display: inline-block; /* necesario para poner un padding a un elem. tipo inline*/
+	padding: 20px;
+}
+
+/*Ejemplo para posicionar un botón a la izq y otro a la dcha*/
+.contenedor {
+	background:#ccc;
+	width: 600px;
+	margin: 20px 0; 
+	overflow: hidden; /*Soluciona el error de visualización cuando incluye hijos con float*/
+	
+}
+
+.izquierda {float:left;}
+.derecha {float:right;}
+
+/*Ejemplo para posicionar una caja sobre otra*/
+.contenedor2 .caja {
+	width: 150px;
+	height: 150px;
+	position: relative; /*Permite que no se coloque una caja al lado de la otra*/
+}
+
+.azul {
+	background: #009ddc;
+	z-index:1; /*Permite mostrar la caja más cerca del observador, siempre que su valor z-index sea mayor que el de la otra*/
+}
+
+.gris {
+	background: #32021f;
+	bottom:80px; /*posicion relativa*/
+	left: 50px; /*posicion relativa*/
+	z-index:0; /*Permite mostrar la caja más cerca del observador*/
+}

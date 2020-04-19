@@ -1,0 +1,26 @@
+$colorPrimario: #f9a03f
+
+body
+	background: #1b3d82
+	font-family: Arial
+
+.articulo
+	background: #e9f1f7
+	width: 500px
+	padding: 20px
+	.titulo
+		color: $colorPrimario
+	.autor
+		color: #4d5061
+	p
+		a
+			color: $colorPrimario
+	div
+		text-align: center
+		a
+			text-decoration: none
+			font-size: 25px
+			color: $colorPrimario
+			// Para acceder a las pseudo-clases se utiliza &
+			&:hover
+				text-decoration: underline
